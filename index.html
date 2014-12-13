@@ -1,31 +1,35 @@
+
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Elmo_PureScript's Simple Slider Puzzle</title>
-
+  <title>Elmo_Purescript's Simple Slider Puzzle</title>
+  <style>
+  .picture {
+    border: 1px solid black;
+  }
+  </style>
 </head>
 <body>
   <div id="title">
-    <h2>Elmo_PureScript's Simple Slider Puzzle</h2>
+    <h1>Elmo_Purescript's Simple Slider Puzzle</h1>
   </div>
-  <div id="slider">
 
-    <br>
+  <div>
+  <p id="moves_requested">
+    <input  style="text-transform: uppercase" type="text" name="input_moves" id ="input_moves" size="80" />
+  </p>
+  <input type="radio" name="input_mode" checked > Input Mode
+  <br>
+  <input type="radio" name="playback_mode" > Playback Mode
   </div>
-  <div id="main" class="main">
+  <div id="main" class="main" tabindex="0"  onkeyup="handleOnKeyUp(event)" >
     <canvas id="puzzle" width="480px" height="480px"></canvas>
   </div>
-  <br>
-  <p id="moves_made" >
+  <p id="moves_made">
   </p>
-  <p > Target: </p>
-  <div id="targ" class="maintarg">
-    <canvas id="target" width="480px" height="480px"></canvas>
-
+  <div id="target" class="main">
+    <canvas id="puzzle_final" width="480px" height="480px"></canvas>
   </div>
-
-
   <script src="slider.js"></script>
 </body>
 </html>
